@@ -2,9 +2,9 @@
 a migration with a syntax error
 """
 
-import caribou
-
 import me_no_existy
+
+import caribou
 
 
 def upgrade(connection):
