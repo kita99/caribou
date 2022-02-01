@@ -74,7 +74,7 @@ def list_migrations_command(args):
     migration_dir = args.migration_dir
     Console.info("Migrations in [%s]:" % migration_dir)
     Console.info("")
-    migrations = caribou.get_migrations(migration_dir)
+    migrations = caribou.load_migrations(migration_dir)
     for migration in migrations:
         version = migration.get_version()
         path = migration.path
