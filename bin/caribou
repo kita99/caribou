@@ -126,6 +126,8 @@ def main():
         # expected errors, only show the error string
         Console.error("")
         Console.error("Error: %s " % str(err))
+    except AttributeError:
+        parser.error("Not enough arguments")
     except Exception:
         Console.error("an unexpected error occured:")
         Console.error(traceback.format_exc())
